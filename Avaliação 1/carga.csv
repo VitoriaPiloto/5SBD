@@ -1,0 +1,5 @@
+order-id;order-item-id;purchase-date;payments-date;buyer-email;buyer-name;cpf;buyer-phone-number;sku;product-name;quantity-purchased;currency;item-price;ship-service-level;recipient-name;ship-address-1;ship-address-2;ship-address-3;ship-city;ship-state;ship-postal-code;ship-country;ioss-number
+2;1;2024-05-09;2024-05-08;vitoria@gmail.com;vitoria;16077282731;21994061177;12345675;computador;2;brl;1045.99;2;sedex;rua da alegria 10;;;rio de janeiro;rio de janeiro;21235220;brasil;IM0123456789
+2;2;2024-05-09;2024-05-08;vitoria@gmail.com;vitoria;16077282731;21994061177;12345678;monitor;5;brl;140.90;2;sedex;rua da alegria 10;;;rio de janeiro;rio de janeiro;21235220;brasil;IM0123456789
+123456;123456-001;2024-05-11;2024-05-11;cliente@email.com;João da Silva;12345678900;1198765432;ABCD1234;Smartwatch XYZ;1;BRL;199.99;Padrão;Maria Oliveira;Rua dos Exemplos, 123;;;Cidade Exemplar;SP;12345-678;Brasil;
+678901;678901-001;2024-05-10;2024-05-10;cliente@gmail.com;Ana Souza;98765432100;2191234567;EFGH5678;Headset Gamer;2;USD;49.99;Expresso;Pedro Santos;Avenida Principal, 908;;;Capital;CE;00000-000;EUA;"
