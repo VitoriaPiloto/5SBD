@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vmendes\\source\\repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\WebApplication1.csproj": {}
+    "C:\\Users\\vmendes\\Source\\Repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vmendes\\source\\repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\WebApplication1.csproj": {
+    "C:\\Users\\vmendes\\Source\\Repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vmendes\\source\\repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "C:\\Users\\vmendes\\Source\\Repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "C:\\Users\\vmendes\\source\\repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "C:\\Users\\vmendes\\Source\\Repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\vmendes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vmendes\\source\\repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\obj\\",
+        "outputPath": "C:\\Users\\vmendes\\Source\\Repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
@@ -51,6 +51,32 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.29, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.29, )"
+            },
+            "Microsoft.SqlServer.Server": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"

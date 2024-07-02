@@ -9,9 +9,33 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApplication1
 build_property.RootNamespace = WebApplication1
-build_property.ProjectDir = C:\Users\vmendes\source\repos\5SBD\Avaliação 2\WebAPI\WebApplication1\
+build_property.ProjectDir = C:\Users\vmendes\Source\Repos\5SBD\Avaliação 2\WebAPI\WebApplication1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\vmendes\source\repos\5SBD\Avaliação 2\WebAPI\WebApplication1
+build_property.MSBuildProjectDirectory = C:\Users\vmendes\Source\Repos\5SBD\Avaliação 2\WebAPI\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/vmendes/Source/Repos/5SBD/Avaliação 2/WebAPI/WebApplication1/Views/Pedidos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vmendes/Source/Repos/5SBD/Avaliação 2/WebAPI/WebApplication1/Views/Pedidos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vmendes/Source/Repos/5SBD/Avaliação 2/WebAPI/WebApplication1/Views/Pedidos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vmendes/Source/Repos/5SBD/Avaliação 2/WebAPI/WebApplication1/Views/Pedidos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vmendes/Source/Repos/5SBD/Avaliação 2/WebAPI/WebApplication1/Views/Pedidos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vmendes/Source/Repos/5SBD/Avaliação 2/WebAPI/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
