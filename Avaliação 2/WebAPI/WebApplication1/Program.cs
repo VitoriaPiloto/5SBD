@@ -1,4 +1,7 @@
-using WebApplication1.DataContext;
+using AutoMapper;
+using System.Xml.Linq;
+using WebApplication1.Application;
+using WebApplication1.Application.DataContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ApplicationDbContext>();
+builder.Services.AddAutoMapper(typeof(AutoMapperConfiguration));
 
 var app = builder.Build();
 

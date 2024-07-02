@@ -278,3 +278,4 @@ C:\Users\vmendes\Source\Repos\5SBD\Avaliação 2\WebAPI\WebApplication1\obj\Debu
 C:\Users\vmendes\Source\Repos\5SBD\Avaliação 2\WebAPI\WebApplication1\obj\Debug\net6.0\ref\WebApplication1.dll
 C:\Users\vmendes\Source\Repos\5SBD\Avaliação 2\WebAPI\WebApplication1\obj\Debug\net6.0\WebApplication1.RazorAssemblyInfo.cache
 C:\Users\vmendes\Source\Repos\5SBD\Avaliação 2\WebAPI\WebApplication1\obj\Debug\net6.0\WebApplication1.RazorAssemblyInfo.cs
+C:\Users\vmendes\Source\Repos\5SBD\Avaliação 2\WebAPI\WebApplication1\bin\Debug\net6.0\AutoMapper.dll
