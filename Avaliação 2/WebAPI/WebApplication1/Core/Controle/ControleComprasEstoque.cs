@@ -14,9 +14,31 @@ namespace WebApplication1.Core.Controle
             _context = context;
         }
 
+        public IList<ComprasEstoque> ObterComprasEstoques()
+        {
+            return _context.ComprasEstoque.ToList();
+        }
+
+        public ComprasEstoque ObterCompraEstoque(string codigoProduto)
+        {
+            return _context.ComprasEstoque.FirstOrDefault(x => x.CodigoProduto == codigoProduto);
+        }
+
+        public bool ExisteCompraPendenteParaProduto(string codigoProduto)
+        {
+            return _context.ComprasEstoque.Any(x => x.CodigoProduto == codigoProduto);
+        }
+
         public bool SalvarComprasEstoque(ComprasEstoque comprasEstoque)
         {
             _context.ComprasEstoque.Add(comprasEstoque);
+            var retorno = _context.SaveChanges();
+            return retorno == 1;
+        }
+
+        public bool ApagarCompraEstoque(ComprasEstoque comprasEstoque)
+        {
+            _context.ComprasEstoque.Remove(comprasEstoque);
             var retorno = _context.SaveChanges();
             return retorno == 1;
         }
