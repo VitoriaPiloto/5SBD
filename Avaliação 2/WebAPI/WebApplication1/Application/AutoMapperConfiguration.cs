@@ -9,13 +9,14 @@ namespace WebApplication1.Application
         public AutoMapperConfiguration()
         {
             CreateMap<Pedidos, PedidosViewModel>();
-               
             CreateMap<PedidosViewModel, Pedidos>();
+            
+            CreateMap<Clientes, ClientesViewModel>();
+            CreateMap<ClientesViewModel, Clientes>();
 
             CreateMap<ItensPedidoViewModel, ItensPedido>()
                 .ForMember(dto => dto.Quantidade , x => x.MapFrom(y => y.Quantidade))
                 .ForMember(dto => dto.IdProduto, x => x.MapFrom(y => y.IdProduto));
-
             CreateMap<ItensPedido, ItensPedidoViewModel>()
                 .ForMember(dto => dto.IdProduto, x => x.MapFrom(y => y.IdProduto))
                 .ForMember(dto => dto.Quantidade, x => x.MapFrom(y => y.Quantidade));
@@ -23,7 +24,6 @@ namespace WebApplication1.Application
             CreateMap<ComprasEstoqueViewModel, ComprasEstoque>()
                 .ForMember(dto => dto.Quantidade , x => x.MapFrom(y => y.Quantidade))
                 .ForMember(dto => dto.CodigoProduto, x => x.MapFrom(y => y.CodigoProduto));
-
             CreateMap<ComprasEstoque, ComprasEstoqueViewModel>()
                 .ForMember(dto => dto.CodigoProduto, x => x.MapFrom(y => y.CodigoProduto))
                 .ForMember(dto => dto.Quantidade, x => x.MapFrom(y => y.Quantidade));

@@ -22,7 +22,7 @@ namespace WebApplication1.Controller
         // GET: Compras Estoque
         [HttpGet]
         [Route("/comprasEstoque")]
-        public IList<ComprasEstoque> GetPedidos()
+        public IList<ComprasEstoque> GetComprasEstoque()
         {
             return new ControleComprasEstoque(_context).ObterComprasEstoques();
         }
@@ -30,7 +30,7 @@ namespace WebApplication1.Controller
         //POST: Compras Estoque
         [HttpPost]
         [Route("/comprasEstoque")]
-        public ActionResult PostPedidos([FromBody] ComprasEstoqueViewModel compraEstoque)
+        public ActionResult PostComprasEstoque([FromBody] ComprasEstoqueViewModel compraEstoque)
         {
             if (!ModelState.IsValid)
             {
