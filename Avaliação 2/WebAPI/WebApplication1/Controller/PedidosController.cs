@@ -9,6 +9,7 @@ using NuGet.Common;
 using WebApplication1.Model;
 using AutoMapper;
 using WebApplication1.Application.DataContext;
+using WebApplication1.Core.Controle;
 using WebApplication1.ViewModel;
 
 namespace WebApplication1.Controller
@@ -17,12 +18,12 @@ namespace WebApplication1.Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public readonly IMapper _mapper;
+        public readonly IMapper Mapper;
 
         public PedidosController(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
-            _mapper = mapper;
+            Mapper = mapper;
         }
 
         // GET: Pedidos
@@ -30,33 +31,92 @@ namespace WebApplication1.Controller
         [Route("/pedidos")]
         public IEnumerable<Pedidos> GetPedidos()
         {
-            return _context.pedidos.ToList();
+            return new ControlePedidos(_context).ObterPedidos();
         }
 
         //POST: Pedidos
         [HttpPost]
         [Route("/pedidos")]
-        public ActionResult PostPedidos([FromBody]PedidosViewModel pedido)
+        public ActionResult PostPedidos([FromBody] PedidosViewModel pedido)
         {
+            var controleCliente = new ControleCliente(_context);
+            var controlePedidos = new ControlePedidos(_context);
+            var controleItensPedido = new ControleItensPedido(_context);
+            var controleAtendimento = new ControleAtendimentos(_context);
+
             if (!ModelState.IsValid)
             {
                 return BadRequest("Dados inválidos.");
             }
 
-            // Processamento de dados
             try
             {
-                var map = _mapper.Map<Pedidos>(pedido);
-                _context.pedidos.Add(map); // Adiciona o objeto Pedido ao contexto
-                _context.SaveChanges(); // Salva as alterações no banco de dados
+                var mapPedido = Mapper.Map<Pedidos>(pedido);
+
+                mapPedido.Id = controlePedidos.ObterProximaChave().ToString();
+
+                var clienteExiste = controleCliente.ObterClientes().Any(x => x.Cpf == pedido.Cpf);
+
+                if (!clienteExiste)
+                {
+                    var clienteNovo = new Clientes
+                    {
+                        Cpf = pedido.Cpf,
+                        Email = string.Empty,
+                        Nome = string.Empty,
+                        Telefone = String.Empty
+                    };
+
+                    var adicionouNovoCliente = controleCliente.SalvarCliente(clienteNovo);
+
+                    if (!adicionouNovoCliente)
+                    {
+                        throw new Exception();
+                    }
+                }
+
+                var retorno = controlePedidos.SalvarPedido(mapPedido);
+
+                if (!retorno)
+                {
+                    throw new Exception();
+                }
+
+                if (pedido.ItensPedidos.Count > 0)
+                {
+                    foreach (var itemPedido in pedido.ItensPedidos)
+                    {
+                        if (!new ControleProdutos(_context).ProdutoExistente(itemPedido.IdProduto))
+                            throw new Exception();
+
+                        var mapItemPedido = Mapper.Map<ItensPedido>(itemPedido);
+
+                        mapItemPedido.Id = controleItensPedido.ObterProximaChave().ToString();
+                        mapItemPedido.IdPedido = mapPedido.Id;
+
+                        var salvouItempedido = controleItensPedido.SalvarItensPedido(mapItemPedido);
+
+                        if (!salvouItempedido)
+                        {
+                            throw new Exception();
+                        }
+                    }
+                }
+
+                var atendimento = controleAtendimento.CriarAtendimentoDoPedido(mapPedido.Id);
+
+                var salvouAtendimento = controleAtendimento.SalvarAtendimento(atendimento);
+
+                if (!salvouAtendimento)
+                {
+                    throw new Exception();
+                }
             }
             catch (Exception ex)
             {
-                // Tratamento de exceção (caso haja algum erro durante o salvamento)
                 return StatusCode(500, $"Erro ao salvar o pedido: {ex.Message}");
             }
 
-            // Retorno de resultado
             return Created("Criado", pedido);
         }
     }

@@ -19,19 +19,19 @@ namespace WebApplication1.Model
         [Column("buyer-phone-number")]
         public string Telefone { get; set; }
 
-        [Column("ship-adress-1")]
-        public string Logradouro { get; set; }
+        [Column("ship-address-1")]
+        public string? Logradouro { get; set; }
 
         [Column("ship-city")]
-        public string Cidade { get; set; }
+        public string? Cidade { get; set; }
 
         [Column("ship-state")]
-        public string Estado { get; set; }
+        public string? Estado { get; set; }
 
         [Column("ship-postal-code")]
-        public string Cep { get; set; }
+        public string? Cep { get; set; }
 
         [Column("ship-country")]
-        public string Pais { get; set; }
+        public string? Pais { get; set; }
     }
 }

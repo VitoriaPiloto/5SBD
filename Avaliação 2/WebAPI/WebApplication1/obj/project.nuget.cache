@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qPgepGXwixczk3WthBmKl+OyU8htlFv2SlG13naqXrPEWqqOazU4p0A0xxsrmF/XQD2OEG732Qi10uFLtFDD5g==",
+  "dgSpecHash": "idj0UJ6mz4xPoReog8/YbNMZ+Anmshd/VnrvfMcHpEEWuUSlSCtTD/DWwhHlzW0orD9jhtouPQfNCeu5Slq59A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vmendes\\Source\\Repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\Users\\vmendes\\source\\repos\\5SBD\\Avaliação 2\\WebAPI\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vmendes\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\vmendes\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
