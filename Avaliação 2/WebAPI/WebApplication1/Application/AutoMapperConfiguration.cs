@@ -19,6 +19,14 @@ namespace WebApplication1.Application
             CreateMap<ItensPedido, ItensPedidoViewModel>()
                 .ForMember(dto => dto.IdProduto, x => x.MapFrom(y => y.IdProduto))
                 .ForMember(dto => dto.Quantidade, x => x.MapFrom(y => y.Quantidade));
+            
+            CreateMap<ComprasEstoqueViewModel, ComprasEstoque>()
+                .ForMember(dto => dto.Quantidade , x => x.MapFrom(y => y.Quantidade))
+                .ForMember(dto => dto.CodigoProduto, x => x.MapFrom(y => y.CodigoProduto));
+
+            CreateMap<ComprasEstoque, ComprasEstoqueViewModel>()
+                .ForMember(dto => dto.CodigoProduto, x => x.MapFrom(y => y.CodigoProduto))
+                .ForMember(dto => dto.Quantidade, x => x.MapFrom(y => y.Quantidade));
         }
     }
 }
