@@ -10,7 +10,7 @@
 
 ## Modelo da API no swagger:
 
-![Swagger](/swagger)
+![Swagger](/swagger.jpeg)
 
 ## Modelo de requisição POST:
 
@@ -65,3 +65,9 @@
   "preco": 0
 }
 ```
+
+## Tecnologias utilizadas:
+
+- C#
+- Entity Framework
+- Arquitetura MVC / DDD
