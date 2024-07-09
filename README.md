@@ -71,3 +71,4 @@
 - C#
 - Entity Framework
 - Arquitetura MVC / DDD
+- AutoMapper
